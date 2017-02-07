@@ -8,172 +8,217 @@ block slides
     article.title-slide
         h1 ESX
 
-    article
-        | JavaScript это имплементация стандарта ECMAScript
+    article.center.title-slide-2
+        .wrapper
+            h1.title ECMAScript
 
-    article.center.qrcode
+    article.center.qrcode.ecma
         .wrapper
             .half
-                h2 ECMA–262 5.1 (Harmony)
+                h2 ECMA–262 ver. 5.1
             .half
                 img(src="images/ecma.svg", alt="QRCODE cо ссылкой на ECMA–262")
             p 
                 a(href="https://www.ecma-international.org/ecma-262/5.1/", data-click=true) http://ecma-international.org/ecma-262/5.1/
 
-    article.center.qrcode
+    article.center.qrcode.ecma
         .wrapper
             .half
-                h2 ECMA–262 v. 7 2016
+                h2 ECMA–262 ver. 7 
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на ECMA–262")
+                img(src="images/ecma-last.svg", alt="QRCODE cо ссылкой на ECMA–262")
             p 
-                a(href="http://www.ecma-international.org/publications/standards/Ecma-262.htm", data-click=true) http://www.ecma-international.org/publications/standards/Ecma-262.htm
+                a(href="http://www.ecma-international.org/publications/standards/Ecma-262.htm", data-click=true) http://ecma-international.org/publications/standards/Ecma-262.htm
 
+    article.cloud.center.illustration.illustration--tc
+        h1 
+            p.wrapper Комитет
+                b T39
 
-    article
-        | The Ecma International Technical Committee 39 (aka TC39)    
+    article.center.comm
+        .wrapper
+            h1 The Ecma International 
+                br
+                |Technical Committee 39  
 
-    article
-        ol 
-            li 1997
-            li 1998
-            li 1999
-            li выбросили
-            li 2009 
-                ol 
-                    li 2011 
-            li.short-releases 2015
-            li 2016
+    article.center.comm-right
+        .wrapper
+            h1 TC39  
 
-    article
-        ol(start="0")
-            li Strawman (Идея)
-            li Proposal (Предложение)
-            li Draft (Черновик)
-            li Candidate (Кандидат)
-            li Finished (Завершено)
+    article.center.history
+        .wrapper
+            ol 
+                li 1997
+                li 1998
+                li 1999
+                li выбросили
+                li 2009 
+                    ol 
+                        li 2011 
+                li.short-releases 2015
+                li 2016
 
-    article.center.qrcode
+    article.center.history
+        .wrapper
+            ol(start="0")
+                li Strawman (Идея)
+                li Proposal (Предложение)
+                li Draft (Черновик)
+                li Candidate (Кандидат)
+                li Finished (Завершено)
+
+    article.center.qrcode.proccess
         .wrapper
             .half
-                h2 Процесс TC39
+                h2 Процесс 
+                    br
+                    | TC39
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на процесс TC39")
+                img(src="images/proc.svg", alt="QRCODE cо ссылкой на процесс TC39")
             p 
                 a(href="https://tc39.github.io/process-document/", data-click=true) https://tc39.github.io/process-document/
 
     
 
-    article
-        h1 Идея
-        p  Может внести член TC39 или зарегистрированный контрибьютор TC39
-        ul 
-            li надо рассмотреть на встрече TC39
-            li надо добавить на страничку со Stage-0 
+    article.stage.stage--0.center
+        .wrapper.left
+            h1 Идея
+            p  Может внести член TC39 или 
+                br
+                | зарегистрированный контрибьютор TC39
+            ul 
+                li Pассмотреть на встрече TC39
+                li Добавить на страничку со Stage-0 
 
-    article.center.qrcode
-        .wrapper
-            .half
-                h2 Регистрация контрибьютора
-            .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на ECMA–262")
-            p 
-                a(href="http://www.ecma-international.org/memento/contribute_TC39_Royalty_Free_Task_Group.php", data-click=true) http://www.ecma-international.org/memento/contribute_TC39_Royalty_Free_Task_Group.php
+    //- article.center.qrcode
+    //-     .wrapper
+    //-         .half
+    //-             h2 Регистрация контрибьютора
+    //-         .half
+    //-             img(src="images/ecma.svg", alt="QRCODE cо ссылкой на ECMA–262")
+    //-         p 
+    //-             a(href="http://www.ecma-international.org/memento/contribute_TC39_Royalty_Free_Task_Group.php", data-click=true) http://www.ecma-international.org/memento/contribute_TC39_Royalty_Free_Task_Group.php
 
 
-    article.center.qrcode
+    article.screen.screen--stage-0
+
+    article.center.qrcode.stage-0
         .wrapper
             .half
                 h2 STAGE 0
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на ECMA–262")
+                img(src="images/stage0.svg", alt="QRCODE cо ссылкой на ECMA–262")
             p 
                 a(href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md", data-click=true) https://github.com/tc39/proposals/blob/master/stage-0-proposals.md
 
-    article.screen.screen--stage-0
+    article.stage.stage--1.center
+        .wrapper.left
+            h1 Предложение 
+            ul 
+                li Должен быть выбран человек, 
+                    br
+                    | формально ответственный за предложение
+                li Либо этот человек, 
+                    br
+                    | либо его помошник должен быть членом TC39
+                li Должна быть описана проблема, которая решается
+                li Должны быть обозначены проблемы,
+                    br
+                    | которые будут с внесением в спецификацию
+                li Примеры, полифилы
 
-    article
-        h1 Предложение 
-        p Могут отказать или отложить
-        ul 
-            li Должен быть выбран человек, формально ответственный за предложение
-            li Либо этот человек, либо его помошник должен быть членом TC39
-            li Должна быть описана проблема, которая решается
-            li Должны быть обозначены проблемы, которые будут с внесением в спеку
-            li Примеры, полифилы
+    article.screen.screen--stage-i
 
-    article.center.qrcode
+    article.center.qrcode.stage-i
         .wrapper
             .half
                 h2 Неактивные
-                ul
-                    li Отложеные
-                    li Отозваные
-                    li Отвергнутые
+                //- ul
+                //-     li Отложеные
+                //-     li Отозваные
+                //-     li Отвергнутые
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на неактивные предложения")
+                img(src="images/stage_i.svg", alt="QRCODE cо ссылкой на неактивные предложения")
             p 
                 a(href="https://github.com/tc39/proposals/blob/master/inactive-proposals.md", data-click=true) https://github.com/tc39/proposals/blob/master/inactive-proposals.md
 
 
-    article
-        h1 Черновик
-        p Переписано может быть всё
-        ul
-            li Максимально полное формальное описание, но могут быть и todo
-            li Нужны две имплементации, но одна может быть в транспайлере, например Babel
+    article.stage.stage--0.center
+        .wrapper.left
+            h1 Черновик
+            ul
+                li Максимально полное формальное описание, 
+                    br
+                    | но могут быть и todo
+                li Нужны две имплементации, 
+                    br
+                    | но одна может быть в транспайлере, 
+                    br
+                    | например Babel
 
-    article
-        h1 Кандидат
-        p Инкриментальные изменения
-        ul 
-            li Текст спецификации должен быть закончен
-            li Назначены рецензенты
-            li Редактор спецификации ECMAScript должен её подписать
-            li Минимум две имплементации
+    article.stage.stage--0.center
+        .wrapper.left
+            h1 Кандидат
+            ul 
+                li Текст спецификации должен быть закончен
+                li Назначены рецензенты
+                li Редактор спецификации ECMAScript  
+                    br
+                    | должен её подписать
+                li Минимум две имплементации
 
-    article.center.qrcode
+    article.screen.screen--stage-3
+
+    article.center.qrcode.stage-3
         .wrapper
             .half
-                h2 STAGE 1-3
+                h2 STAGE 1
+                    br
+                    | STAGE 2
+                    br
+                    | STAGE 3
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на Stage 1-3")
+                img(src="images/stage_3.svg", alt="QRCODE cо ссылкой на Stage 1-3")
             p 
                 a(href="https://github.com/tc39/proposals", data-click=true) http://github.com/tc39/proposals
 
-    article
-        h1 Завершено
-        p Изменения только если обнаружены критические ошибки
-        ul
-            li Тесты
-            li Две имплементации которые их проходят
-            li Опыт использования имплементаций
-            li Редактор спецификации ECMAScript должен её подписать
+    article.stage.stage--0.center
+        .wrapper.left
+            h1 Завершено
+            ul
+                li Тесты
+                li Две имплементации которые их проходят
+                li Опыт использования имплементаций
+                li Редактор спецификации ECMAScript   
+                    br
+                    | должен её подписать
 
+    article.screen.screen--stage-4
 
-    article.center.qrcode
+    article.center.qrcode.stage-0
         .wrapper
             .half
                 h2 STAGE 4
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на Stage 4")
+                img(src="images/stage_4.svg", alt="QRCODE cо ссылкой на Stage 4")
             p 
                 a(href="https://github.com/tc39/proposals/blob/master/finished-proposals.md", data-click=true) https://github.com/tc39/proposals/blob/master/finished-proposals.md
 
-    article
-        ul
-            li V8 — Chrome, Chromium, Node.js, Opera, Electron, Vivaldi, Couchbase …
-            li SpiderMonkey — Firefox
-            li JavaScriptCore — Safari
-            li Chakra — IE
-            li …
+    article.stage.stage--0.center
+        .wrapper.left
+            ul
+                li V8 — Chrome, Chromium, Node.js, Opera, Electron, …
+                li SpiderMonkey — Firefox
+                li JavaScriptCore — Safari
+                li Chakra — IE
+                li …
 
-    article.center.qrcode
+    article.center.qrcode.engines
         .wrapper
             .half
-                h2 Список движков
+                h2 Engines
             .half
-                img(src="images/ecma.svg", alt="QRCODE cо ссылкой на список движков")
+                img(src="images/engines.svg", alt="QRCODE cо ссылкой на список движков")
             p 
                 a(href="https://en.wikipedia.org/wiki/List_of_ECMAScript_engines", data-click=true) https://en.wikipedia.org/wiki/List_of_ECMAScript_engines
 
@@ -236,7 +281,7 @@ block slides
 
     article.cloud.center.illustration.illustration--wecan
         h1 
-            p.wrapper Yes, we can!
+            p.wrapper Yes, we can!
     
     article.screen.screen--support-es6
 
@@ -308,6 +353,10 @@ block slides
             p.wrapper Babel.js
 
     article.screen.screen--sandbox
+
+    article.screen.screen--preset
+
+    article.screen.screen--conf
 
     article.illustration.illustration--grunt
 
@@ -491,10 +540,23 @@ block slides
 
     article.illustration.illustration--m
 
+    article.center.code-1
+        .wrapper
+            pre
+                code
+                    | // moses.js
+                    | class Moses {
+                    |     constructor () {
+                    |         let myPeopleGo = "Moses";
+                    |         alert(myPeopleGo);
+                    |     }
+                    | }
+                    | new Moses;
+
     article.illustration.illustration--m1
 
     article.illustration.illustration--vaimo
-
+    
     article.center.code-2
         .wrapper
             pre
@@ -520,6 +582,16 @@ block slides
             pre
                 code
                     | npm run gulp
+                    | qrc
+
+    article.screen.screen--alert-m1
+
+    article.center.person
+        .wrapper
+            img.photo(src="images/andrey.jpeg", alt="Фотография")
+            h1.name="Андрей Головин"
+            a.email(href="mailto:andrey.golovin@vaimo.com") andrey.golovin@vaimo.com
+
 
     article.illustration.illustration--m2
 
@@ -709,6 +781,8 @@ block slides
 
 
     article.screen.screen--alert
+
+    article.illustration.illustration--doit
 
     article.contacts.center.qrcode
         .wrapper
