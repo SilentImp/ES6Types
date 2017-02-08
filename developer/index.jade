@@ -46,7 +46,7 @@ block slides
 
     article.center.history
         .wrapper
-            ol 
+            ol.special
                 li 1997
                 li 1998
                 li 1999
@@ -424,9 +424,9 @@ block slides
                 code
                     | # package.info
                     | …
-                    | scripts": {
+                    | "scripts": {
                     |   "build": "grunt --verbose"
-                    | },"
+                    | },
                     | …
 
     article.center.code-1
@@ -447,7 +447,7 @@ block slides
                     | watch: {
                     |   scripts: {
                     |       files: ['js/source/**/*.js'],   
-                    |       tasks: ['watch'],
+                    |       tasks: ['babel'],
                     |   }
                     | }
                     | // …
@@ -459,10 +459,10 @@ block slides
                 code
                     | # package.info
                     | # …
-                    | scripts": {
+                    | "scripts": {
                     |   "build": "grunt --verbose"
                     |   "watch": "grunt watch --verbose"
-                    | },"
+                    | },
                     | # …
 
     article.center.code-1
@@ -506,9 +506,9 @@ block slides
                 code
                     | # package.info
                     | # …
-                    | scripts": {
+                    | "scripts": {
                     |   "build": "gulp --verbose"
-                    | },"
+                    | },
                     | # …
 
     article.center.code-1
@@ -531,10 +531,10 @@ block slides
                 code
                     | # package.info
                     | # …
-                    | scripts": {
+                    | "scripts": {
                     |   "build": "gulp --verbose"
                     |   "watch": "gulp watch --verbose"
-                    | },"
+                    | },
                     | # …
 
     article.center.code-1
