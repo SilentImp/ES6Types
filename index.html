@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><title>Типы данных | ECMAScript</title><link href="css/styles.css" rel="stylesheet"><script data-main="js/presentation" src="js/requirejs/require.js"></script></head><body><form action="/select/slide" method="post" class="go-to-page"><fieldset><input type="text" maxlength="3" value="" placeholder="1"></fieldset></form><section class="progress"><div class="value"></div></section><section id="slides" class="dark"><article class="title-slide"><h1>ESX</h1></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">Типы данных</h1></div></article><article class="center types-list"><ol class="half"><li>Undefined</li><li>Null</li><li>Object</li><li>Boolean</li></ol><ol start="5" class="half"><li>String</li><li>Number</li><li class="green">Symbol</li></ol></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">Undefined</h1></div></article><article class="center code-6"><div class="wrapper"><pre><code>[undefined]</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>// x объявлен
+var x;
+if (x === undefined) {}
+if (x === void 0) {}
+ 
+// x не объявлен
+if (typeof x === "undefined") {}</code></pre></div></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">NULL</h1></div></article><article class="center code-6"><div class="wrapper"><pre><code>[null]</code></pre></div></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">Object</h1></div></article><article class="center types-wrapper"><div class="wrapper"><ol class="half"><li>Constructor</li><li>Prototype</li><li>Ordinary </li></ol><ol start="4" class="half"><li>Exotic</li><li>Standard</li><li>Built-in</li></ol></div></article><article class="center types-wrapper"><div class="wrapper"><ol class="half"><li>Boolean</li><li>Number</li></ol><ol start="3" class="half"><li>String</li><li>Symbol</li></ol></div></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">Boolean</h1></div></article><article class="center code-6"><div class="wrapper"><pre><code>[true; false]</code></pre></div></article><article class="center code-3"><div class="wrapper"><pre><code>let flag;
+ 
+flag = false;
+typeof flag; // boolean
+flag = Boolean(false);
+typeof flag; // boolean
+ 
+flag = new Boolean(flag);
+typeof flag; // object
+ 
+flag = flag.valueOf();
+typeof flag; // boolean</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>flag = new Boolean(); // false
+flag = new Boolean(document.all); // false</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>flag = new Boolean(false);
+if (flag) {
+  // ???
+}</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>flag = new Boolean(false);
+typeof flag; // object
+if (flag) {
+  // будет выполнено    
+}</code></pre></div></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">String</h1></div></article><article class="center code-7"><div class="wrapper"><pre><code>[0; FFFF₁₆]{0, 2⁵³-1}</code></pre></div></article><article class="center code-3"><div class="wrapper"><pre><code>let container;
+ 
+container = "Содержимое";
+typeof container; // string
+ 
+container = String("Содержимое");
+typeof container; // string
+ 
+container = new String(container);
+typeof container; // object
+ 
+container = container.valueOf();
+typeof container; // string</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>container = "Содержимое";
+typeof container; // string
+container.charAt(2); // д
+typeof container; // string
+container[2]; // д</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>container = "Cтрока 1" + 
+            "Cтрока 2" +
+            "Cтрока 3";
+ 
+container = "Cтрока 1 \ 
+             Cтрока 2 \
+             Cтрока 3";</code></pre></div></article><article class="center strings-wrapper"><div class="wrapper"><h1 class="title">String.&rarr;</h1><ol class="half"><li>startsWith("Подстрока")</li><li>endsWith("Подстрока")</li><li>includes("Подстрока")</li><li>repeat(count)</li></ol><ol start="7" class="half"><li>raw(callSite, ...substitutions)</li><li>fromCodePoint(...codePoint)</li><li>codePointAt(pos)</li><li>normalize(form)</li></ol></div></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">Литерал шаблона</h1></div></article><article class="center code-6"><div class="wrapper"><pre><code class="javascript">`Литерал`</code></pre></div></article><article class="center code-6"><div class="wrapper"><pre><code class="javascript">`Строка 1
+ Строка 2`</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">let name = "Валера"
+  , result;
+result = `А где же наш ${name}?`
+result; // А где же наш Валера?</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="javascript">let  result
+  , price = 234
+  , tax = price * 0.05;
+result = `Товар стоит ${(price + tax).toFixed(2)} ₴`
+result; // Товар стоит 245.70 ₴</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">currency`Товар стоит 
+         ${price + tax}:c(UAH,uk-ua), 
+         так то.`;
+// Товар стоит 245,70 грн., так то.
+ 
+currency`Товар стоит 
+         ${price + tax}:c(JPY,ja-JP), 
+         так то.`;
+// Товар стоит ￥246, так то.</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="javascript">function currency(strings, ...values) {
+ // string = ["Товар стоит ", ":c(UAH,uk-ua), так то."]
+ // values = [245.7]
+ // …
+}</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">// …
+const regExp = /^:c(\((.+),(.+)\))?/;
+let strings_set = [...strings]
+  , values_set = [...values];
+// …</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">// …
+for (let key in values_set) {
+    const index = +key+1
+        , string = strings_set[index]
+        , match = regExp.exec(string);
+    // …
+}
+// …</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">// …
+if (match === null) continue;
+// …</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="javascript">// …
+// [":c(UAH,uk-ua)", "(UAH,uk-ua)", "UAH", "uk-ua"]
+const [ , , currency, locale] = match;
+strings_set[index] = strings_set[index]
+                      .replace(regExp, "");
+values_set[key] = values_set[key]
+                      .toLocaleString(locale, {
+                          style: 'currency'
+                        , currency: currency });
+// …</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">// …
+return String.raw({
+  raw: strings_set
+ }, ...values_set);</code></pre></div></article><article class="center qrcode literals"><div class="wrapper"><div class="half"><h2>Пример использования шаблонных литералов</h2></div><div class="half"><img src="images/literals.svg" alt="QRCODE cо ссылкой на IEEE 754-2008"></div><p> <a href="https://jsfiddle.net/zrv9azyw/" data-click>https://jsfiddle.net/zrv9azyw/</a></p></div></article><article class="screen screen--stage-1"></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">Number</h1></div></article><article class="center qrcode numbers"><div class="wrapper"><div class="half"><h2>IEEE 754-2008</h2></div><div class="half"><img src="images/IEEE-754-2008.svg" alt="QRCODE cо ссылкой на IEEE 754-2008"></div><p> <a href="http://ieeexplore.ieee.org/document/4610935/" data-click>http://ieeexplore.ieee.org/document/4610935/</a></p></div></article><article class="center strings-wrapper"><div class="wrapper"><h1 class="title">Number.&rarr;</h1><ol class="half"><li>isFinite(число)</li><li>isNaN(число)</li><li>EPSILON</li><li>toLocaleString(locales, options)</li></ol><ol start="4" class="half"><li>isSafeInteger(число)</li><li>MIN_SAFE_INTEGER</li><li>MAX_SAFE_INTEGER</li></ol></div></article><article class="center code-8"><div class="wrapper"><pre><code>[-(2⁵³ - 1); +(2⁵³ - 1)]
++0
+-0
++Infinity
+−Infinity
+NaN</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code>-1/0; // -Infinity
+Infinity/Infinity; // NaN
+-1/Infinity; // -0
+Math.round(-0.1); // -0</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code>NaN === NaN; // false
++0 === -0; // true</code></pre></div></article><article class="center code-3"><div class="wrapper"><pre><code>let container;
+ 
+container = 123.12;
+typeof container; // number
+ 
+container = Number(123.12);
+typeof container; // number
+ 
+container = new Number(container);
+typeof container; // object
+ 
+container = container.valueOf();
+typeof container; // number</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code>23.51 // десятичная
+2351e-2 // научный формат, 23.51
+0x10 // шеснадцатеричная, 16
+0b10 // бинарная, 2
+0o10 // восьмиричная, 8</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code>let x = 10;
+x.toString(16); // a
+x.toString(8); // 12
+x.toString(6); // 14
+x.toString(2); // 1010
+x.toExponential(1); // 1.0e+1</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code>0.2 + 0.1 !== 0.3 
+// 0.30000000000000004
+0.2.toFixed(20) 
+// 0.20000000000000001110
+0.1.toString(2) 
+// 0.000110011001100[1100]</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code>(
+  Math.abs(
+        (0.2 + 0.1) - 0.3 
+  ) < Number.EPSILON
+); // true</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">Number.isNaN('???') //false
+isNaN('???') //true</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">12.34.toPrecision();  // 12.34
+12.34.toString();     // 12.34
+12.34.toPrecision(5); // 12.340
+12.34.toPrecision(4); // 12.34
+12.34.toPrecision(3); // 12.3
+12.34.toPrecision(2); // 12
+12.34.toPrecision(1); // 1e+1</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">0.002345.toPrecision(5); // 0.0023450
+0.002345.toPrecision(4); // 0.002345
+0.002345.toPrecision(3); // 0.00234
+0.002345.toPrecision(2); // 0.0023
+0.002345.toPrecision(1); // 0.002</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">0.002385.toFixed(5); // 0.00238
+0.002386.toFixed(5); // 0.00239
+0.002385.toFixed(4); // 0.0024
+0.002385.toFixed(3); // 0.002
+0.002385.toFixed(2); // 0.00
+0.002385.toFixed(1); // 0.0
+0.002385.toFixed(0); // 0</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">10..toFixed(5); // 10.00000</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code>.toLocaleString()
+Object.is(x,y)</code></pre></div></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">symbol</h1></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">let key_name;
+ 
+// Уникальный символ
+key_name = Symbol(); 
+key_name = Symbol("Пространное описание"); 
+ 
+// Символ, который будет внесен в реестр символов
+key_name = Symbol.for("Пространное описание"); 
+this[key_name] = "Значение";</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">let key_1, key_2;
+ 
+key_1 = Symbol("Пространное описание");
+key_2 = Symbol("Пространное описание"); 
+(key_1 === key_2) // false
+ 
+key_1 = Symbol.for("Пространное описание");
+key_2 = Symbol.for("Пространное описание"); 
+(key_1 === key_2) // true</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="javascript">key_name = new Symbol(); // TypeError
+key_name = Symbol();
+typeof key_name; // "symbol" 
+key_name = Object(key_name);
+typeof key_name; // "object" 
+key_name = key_name[Symbol.toPrimitive]('symbol');
+typeof key_name; // "symbol" </code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">this[key_name] = &quot;Значение&quot;;</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">let obj = {"a": 123}
+  , key = Symbol.for('Пространное описание');
+obj[key] = "Некое значение";
+Object.getOwnPropertySymbols(obj);
+// [Symbol(Пространное описание)]</code></pre></div></article>
+<article class="center code-1"><div class="wrapper"><pre><code>for (let x of obj) {} // Работает как обычно
+for (let x in obj) {} // Игнорирует символы</code></pre></div></article><article class="center symbols-wrapper"><div class="wrapper"><h1 class="title">Symbol.&rarr;</h1><ol class="half"><li>hasInstance</li><li>isConcatSpreadable</li><li>iterator</li><li>match</li><li>replace</li><li>search</li></ol><ol start="7" class="half"><li>species</li><li>split</li><li>toPrimitive</li><li>toStringTag</li><li>unscopables</li></ol></div></article><article class="screen screen--stage-0"></article><article class="center title-slide-2"><div class="wrapper"><h1 class="title">typeof</h1></div></article><article class="center typeof-table"><div class="wrapper"><ul class="quarter"><li>Undefined</li><li>Null<span> баг</span></li><li>Boolean</li><li>String</li></ul><ul class="quarter"><li>"undefined"</li><li>"object"</li><li>"boolean"</li><li>"string"</li></ul><ul class="quarter"><li>Number </li><li>Object</li><li>Object<span> callable</span></li><li>Symbol</li></ul><ul class="quarter"><li>"number"</li><li>"object"</li><li>"function"</li><li>"symbol"</li></ul></div></article><article class="center title-slide-3"><div class="wrapper"><h1 class="title">Приведение типов</h1></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; ToPrimitive(input, hint)</h1><table><tr><td>Undefined</td><td> <b>input</b></td></tr><tr><td>Null</td><td> <b>input</b></td></tr><tr><td>Number</td><td> <b>input </b></td></tr><tr><td>Boolean</td><td> <b>input </b></td></tr><tr><td>String</td><td> <b>input</b></td></tr><tr><td>Symbol</td><td> <b>input</b></td></tr><tr><td>Object</td><td> <b>Хитрый алгоритм</b></td></tr></table></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; ToPrimitive(input, hint)</h1><ol><li>hint может быть [default, string, number]</li><li>если input экзотический объект проверяем есть ли в нём символ @@toPrimitive</li><li>если есть и можно вызвать — вызываем и возвращаем результат или TypeError</li><li>если нет или input — обычный объект, идем дальше</li><li>если hint == "default", заменяем на "number"</li><li>вызываем OrdinaryToPrimitive(input, hint)</li></ol></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; ToPrimitive(input, hint)</h1><ol><li>hint — string применяем toString, valueOf</li><li>hint — number применяем valueOf, toString</li><li>если метод есть и можно вызвать — вызываем и возвращаем результат или TypeError</li></ol></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; toBoolean</h1><table><tr><td>Undefined</td><td> <b>false</b></td></tr><tr><td>Null</td><td> <b>false</b></td></tr><tr><td>Number</td><td> <b>false </b>для [+0; -0; NaN] или  <b>true </b></td></tr><tr><td>String</td><td> <b>false </b>для [""] или  <b>true</b></td></tr><tr><td>Symbol</td><td> <b>true</b></td></tr><tr><td>Object</td><td> <b>true</b></td></tr></table></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; toNumber</h1><table><tr><td>Undefined</td><td> <b>NaN</b></td></tr><tr><td>Null</td><td> <b>+0</b></td></tr><tr><td>Boolean</td><td> <b>1 </b>если true, <b>0 </b>если false</td></tr><tr><td>String</td><td> <ol> <li>Пытаемся обработать как последовательность StringNumericLiteral UTF-16</li><li>Если не вышло — возвращаем NaN</li></ol></td></tr><tr><td>Symbol</td><td> <b>TypeError</b></td></tr><tr><td>Object</td><td> <ol> <li>ToPrimitive(input, number)</li><li>ToNumber(input)</li></ol></td></tr></table></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; toString</h1><table><tr><td>Undefined</td><td> <b>"undefined"</b></td></tr><tr><td>Null</td><td> <b>"null"</b></td></tr><tr><td>Boolean</td><td> <b>"true" </b> если true, <b>"false"</b> если false</td></tr><tr><td>Symbol</td><td> <b>TypeError</b></td></tr><tr><td>Object</td><td> <ol> <li>ToPrimitive(input, string)</li><li>ToString(input)</li></ol></td></tr></table></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; toString</h1><table><tr><td>Number</td><td> <b>"NaN"</b> если NaN<br><b>"0"</b> если +0 или -0<br><b>"Infinity"</b> если +∞<br><b>"-" + toString(arg)</b> если значение меньше 0<br><b>число N</b> переводим в UTF-16</td></tr></table></div></article><article class="center cast"><div class="wrapper"><h1 class="title">&rarr; toObject</h1><table><tr><td>Undefined</td><td> <b>TypeError</b></td></tr><tr><td>Null</td><td> <b>TypeError</b></td></tr><tr><td>Boolean</td><td>Новый объект <b>Boolean</b></td></tr><tr><td>Number</td><td>Новый объект <b>Number</b></td></tr><tr><td>String</td><td>Новый объект <b>String</b></td></tr><tr><td>Symbol</td><td>Новый объект <b>Symbol</b></td></tr></table></div></article>
+
+
+
+
+
+
+
+
+</section></body></html>
