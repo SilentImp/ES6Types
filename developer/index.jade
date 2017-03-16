@@ -89,6 +89,19 @@ block slides
                 li String
                 li Symbol
 
+    article.center.code-1
+        .wrapper
+            pre
+                code
+                    | let container;
+                    | 
+                    | container = {};
+                    | container = Object();
+                    | container = new Object();
+                    | container = Object.create(prototype, props);
+
+    article.illustration.illustration--world
+
     article.center.title-slide-2
         .wrapper
             h1.title Boolean
@@ -497,10 +510,50 @@ block slides
     article.center.code-1
         .wrapper
             pre
-                code
-                    | .toLocaleString()
-                    | Object.is(x,y)
+                code.javascript
+                    | // .toLocaleString([locales [, options]])
+                    | 10000000..toLocaleString(); // 10,000,000
+                    | 10000000..toLocaleString('RU'); // 10 000 000
+                    | 10000000..toLocaleString('DE'); // 10.000.000
 
+    article.center.code-1
+        .wrapper
+            pre
+                code.javascript
+                    | // .toLocaleString([locales [, options]])
+                    | 10000000..toLocaleString(); 
+                    | // 10,000,000
+                    | 10000000..toLocaleString('RU'); 
+                    | // 10 000 000
+                    | 10000000..toLocaleString('DE'); 
+                    | // 10.000.000
+
+    article.center.code-1
+        .wrapper
+            pre
+                code.javascript
+                    | 10000000..toLocaleString('en-US', {
+                    |   style: "currency",
+                    |   currency: "USD"   
+                    | }); // $10,000,000.00
+
+    article.center.code-1
+        .wrapper
+            pre
+                code.javascript
+                    | 10000000..toLocaleString('RU', {
+                    |   style: "currency",
+                    |   currency: "RUB"   
+                    | }); // 10 000 000,00 ₽
+
+    article.center.code-1
+        .wrapper
+            pre
+                code.javascript
+                    | 10000000..toLocaleString('DE', {
+                    |   style: "currency",
+                    |   currency: "EUR"   
+                    | }); // 10.000.000,00 €
 
     article.center.title-slide-2
         .wrapper
@@ -578,22 +631,22 @@ block slides
                     | for (let x of obj) {} // Работает как обычно
                     | for (let x in obj) {} // Игнорирует символы
 
-    article.center.symbols-wrapper
-        .wrapper
-            h1.title Symbol.&rarr;
-            ol.half
-                li hasInstance
-                li isConcatSpreadable
-                li iterator
-                li match
-                li replace
-                li search
-            ol.half(start="7")
-                li species
-                li split
-                li toPrimitive
-                li toStringTag
-                li unscopables
+    //- article.center.symbols-wrapper
+    //-     .wrapper
+    //-         h1.title Symbol.&rarr;
+    //-         ol.half
+    //-             li hasInstance
+    //-             li isConcatSpreadable
+    //-             li iterator
+    //-             li match
+    //-             li replace
+    //-             li search
+    //-         ol.half(start="7")
+    //-             li species
+    //-             li split
+    //-             li toPrimitive
+    //-             li toStringTag
+    //-             li unscopables
             
 
 
@@ -716,6 +769,16 @@ block slides
                     td Object
                     td  
                         b true
+
+
+    article.center.code-1
+        .wrapper
+            pre
+                code.javascript
+                    | (value === 'true');  // true
+                    | typeof (value === 'true');  // boolean
+                    | !!+"1"; // true
+                    | typeof !!+"1"; // boolean
 
     article.center.cast
         .wrapper
@@ -873,7 +936,7 @@ block slides
                     | 1 + true; // ?
                     | 1 + {}; // ?
                     | {} + 1; // ?
-                    
+
     article.center.code-8
         .wrapper
             pre
