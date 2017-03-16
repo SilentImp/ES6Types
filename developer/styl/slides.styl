@@ -1,85 +1,44 @@
-article.stage.center.stage--0
-  .wrapper.left
-    text-align left
-    font-size 42px
-    line-height 64px
-    li
-      font-size 42px
-      line-height 64px
-      margin-bottom 0
-    h1
-      font-size 100px
-      line-height 128px
-      margin-bottom 32px
-
-article.stage.center.stage--1
-  .wrapper.left
-    text-align left
-    font-size 36px
-    line-height 42px
-    li
-      font-size 36px
-      line-height 42px
-      margin-bottom 0
-    h1
-      font-size 100px
-      line-height 126px
-      margin-bottom 21px
-
-article.center.history
-  li
+article.center.qrcode.numbers
+  h2
+    font-size 80px
+    text-align center
+    display block
+  a
     font-size 48px
-    line-height 60px
-    padding-left 120px  
-    &:before
-      margin-left -120px
-      width 100px
-  ol ol
-    margin-left -120px
-    padding 20px 0 0 0;
 
-article.center.qrcode.proccess
+article.center.qrcode.literals
   h2
-    font-size 120px
-
-article.center.qrcode.stage-0
-  h2
-    font-size 140px
-  p 
-    font-size 36px  
-
-article.center.qrcode.stage-3
-  h2
-    font-size 140px
-    line-height 140px
-  p 
-    font-size 64px  
-
-article.center.qrcode.engines
-  h2
-    font-size 140px
-    line-height 140px
-  p 
-    font-size 42px  
-
-article.center.qrcode.stage-i
-  h2
-    font-size 80px
-  p 
-    font-size 36px  
-
-article.center.qrcode.ecma
-  h2
-    font-size 80px
-  p 
-    font-size 36px  
-
-article.person
-  h1.name
     font-size 64px
-    text-transform none
-  a.email
-    font-size 64px
+
+article.cast 
+  .wrapper
+    text-align left
+    width 90%
+    h1.title
+      font-size 72px
+      line-height 80px
+      text-align right
+      text-transform none
+    table
+      width 100%
+      td
+        font-size 42px
+        line-height 64px
+        ol
+          margin 0
+          padding 0
+        li 
+          margin 0
+          padding 0
+          font-size 42px
+          line-height 64px
+        &:first-child
+          width 0%
+          padding-right 20px
+        b 
+          color #0a0
+          white-space nowrap
+
 
 article.title-slide
   background-color #f0db4f
@@ -94,397 +53,571 @@ article.title-slide
     right 40px
     color #323330
 
-article.comm
-  background-color #f0db4f
-  h1
-    font-family: 'PT Sans Caption Bold';
-    font-size 80px
-    line-height 96px
-    color #323330
-
-article.comm-right
-  background-color #f0db4f
-  h1
-    font-family: 'PT Sans Caption Bold';
-    font-size 400px
-    line-height 400px
-    color #323330
-
 article.title-slide-2
   background-color #f0db4f
   h1
     font-family: 'PT Sans Caption Bold';
     font-size 200px
     line-height 200px
-    text-transform none
     color #323330
 
-article.screen.screen--alert
-  background #fff url('../images/alert.png') 50% 50% no-repeat
-  background-size auto
+article.title-slide-3
+  background-color #f0db4f
+  h1
+    font-family: 'PT Sans Caption Bold';
+    font-size 160px
+    line-height 200px
+    color #323330
 
-article.screen.screen--alert-m1
-  background #fff url('../images/alert_m1.png') 50% 50% no-repeat
-  background-size auto
+article.types-wrapper ol li
+  font-size 96px
+  line-height 140px
+  margin-left 80px
 
-article.screen.screen--builder
-  background #fff url('../images/themebuilder.png') 50% 50% no-repeat
-  background-size contain
+article.strings-wrapper 
+  .wrapper
+    text-align left
+    width 100%
 
-article.screen.screen--conf
-  background #fff url('../images/babel_conf.png') 50% 50% no-repeat
-  background-size contain
+  ol li
+    font-size 40px
+    line-height 48px
+    margin-left 20px
+    white-space nowrap
 
-article.screen.screen--preset
-  background #fff url('../images/babel_plugins.png') 50% 50% no-repeat
-  background-size contain
+  h1.title
+    padding-left 20px
+    font-size 72px
+    line-height 80px
+    text-transform none
+
+article.symbols-wrapper 
+  .wrapper
+    text-align left
+    width 100%
+
+  ol li
+    font-size 56px
+    line-height 64px
+    margin-left 80px
+
+  h1.title
+    padding-left 20px
+    font-size 72px
+    line-height 80px
+    text-transform none
+
+article.types-list ol li
+  font-size 96px
+  line-height 140px
+  margin-left 80px
+
+  &.green
+    color green
+
+article.typeof-table 
+  .wrapper
+    width 95%
+  ul
+    list-style none
+    font-size 48px
+    line-height 128px
+    padding 0
+    width 25%
+    margin 0
+    box-sizing border-box
+    li
+      height 128px
+      overflow hidden
+      padding 0 20px
+      margin 0
+      &:nth-child(2n)
+        background-color #f8f8f8
+    span
+      font-size 24px
+      color #999
+
+    &:nth-child(2n)
+      background-color #f0f0f0
+      li:nth-child(2n)
+        background-color #e8e8e8
 
 
 article.screen.screen--stage-0
-  background #fff url('../images/stage_0.png') 50% 100% no-repeat
+  background #fff url('../images/caniuse-symbol.png') 50% 100% no-repeat
   background-size contain
 
-article.screen.screen--stage-i
-  background #fff url('../images/stage_i.png') 50% 100% no-repeat
+article.screen.screen--stage-1
+  background #fff url('../images/caniuse-literal.png') 50% 100% no-repeat
   background-size contain
 
-article.screen.screen--stage-3
-  background #fff url('../images/stage_3.png') 50% 100% no-repeat
-  background-size contain
 
-article.screen.screen--stage-4
-  background #fff url('../images/stage_4.png') 50% 100% no-repeat
-  background-size contain
 
-article.screen.screen--support-es6
-  background #fff url('../images/essupport.png') 50% 100% no-repeat
-  background-size contain
+// article.stage.center.stage--0
+//   .wrapper.left
+//     text-align left
+//     font-size 42px
+//     line-height 64px
+//     li
+//       font-size 42px
+//       line-height 64px
+//       margin-bottom 0
+//     h1
+//       font-size 100px
+//       line-height 128px
+//       margin-bottom 32px
 
-article.screen.screen--support-es7
-  background #fff url('../images/support_es7.png') 50% 100% no-repeat
-  background-size contain
+// article.stage.center.stage--1
+//   .wrapper.left
+//     text-align left
+//     font-size 36px
+//     line-height 42px
+//     li
+//       font-size 36px
+//       line-height 42px
+//       margin-bottom 0
+//     h1
+//       font-size 100px
+//       line-height 126px
+//       margin-bottom 21px
 
-article.screen.screen--support-esnext
-  background #fff url('../images/support_esnext.png') 50% 100% no-repeat
-  background-size contain
+// article.center.history
+//   li
+//     font-size 48px
+//     line-height 60px
+//     padding-left 120px  
+//     &:before
+//       margin-left -120px
+//       width 100px
+//   ol ol
+//     margin-left -120px
+//     padding 20px 0 0 0;
 
-article.screen.screen--admin-theme
-  background #fff url('../images/admin_theme.png') 50% 100% no-repeat
-  background-size contain
+// article.center.qrcode.proccess
+//   h2
+//     font-size 120px
 
-article.screen.screen--admin-config
-  background #fff url('../images/admin_config.png') 50% 100% no-repeat
-  background-size contain
+// article.center.qrcode.stage-0
+//   h2
+//     font-size 140px
+//   p 
+//     font-size 36px  
 
-article.screen.screen--sandbox
-  background #fff url('../images/sandbox.png') 50% 100% no-repeat
-  background-size contain
+// article.center.qrcode.stage-3
+//   h2
+//     font-size 140px
+//     line-height 140px
+//   p 
+//     font-size 64px  
 
-.illustration.illustration--grunt
-  background-image url('../images/grunt.png')
-  background-position 50% 50% 
-  background-size auto
+// article.center.qrcode.engines
+//   h2
+//     font-size 140px
+//     line-height 140px
+//   p 
+//     font-size 42px  
 
-.illustration.illustration--gulp
-  background-image url('../images/gulp.png')
-  background-position 50% 50% 
-  background-size auto
+// article.center.qrcode.stage-i
+//   h2
+//     font-size 80px
+//   p 
+//     font-size 36px  
 
-.illustration.illustration--doit
-  background-image url('../images/doit.jpg')
-  background-position 50% 50% 
-  background-size cover
+// article.center.qrcode.ecma
+//   h2
+//     font-size 80px
+//   p 
+//     font-size 36px  
 
-.illustration.illustration--m
-  background-image url('../images/magento.jpg')
-  background-position 50% 50% 
-  background-size cover
+// article.person
+//   h1.name
+//     font-size 64px
+//     text-transform none
+//   a.email
+//     font-size 64px
 
-.illustration.illustration--m1
-  background-image url('../images/m1.png')
-  background-position 50% 50% 
-  background-size cover
+// article.comm
+//   background-color #f0db4f
+//   h1
+//     font-family: 'PT Sans Caption Bold';
+//     font-size 80px
+//     line-height 96px
+//     color #323330
 
-.illustration.illustration--m2
-  background-image url('../images/m2.png')
-  background-position 50% 50% 
-  background-size cover
+// article.comm-right
+//   background-color #f0db4f
+//   h1
+//     font-family: 'PT Sans Caption Bold';
+//     font-size 400px
+//     line-height 400px
+//     color #323330
 
-.illustration.illustration--vaimo
-  background-image url('../images/logo.png')
-  background-position 50% 50% 
-  background-size auto
-  background-color #fff
+// article.screen.screen--alert
+//   background #fff url('../images/alert.png') 50% 50% no-repeat
+//   background-size auto
 
-.illustration.illustration--tc.cloud
-  background-image url('../images/tc.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 400px 
-    height 400px
-    left 0
-    right 0
-    top 0
-    bottom 0
-    line-height 400px
-    text-align center
-    .wrapper
-      font-size 140px
-      line-height 140px
-      text-align center
-      text-transform none
-    b
-      display block
-      font-size 160px
-      line-height 120px
-    &:after
-      display none
+// article.screen.screen--alert-m1
+//   background #fff url('../images/alert_m1.png') 50% 50% no-repeat
+//   background-size auto
 
-.illustration.illustration--why.cloud
-  background-image url('../images/why.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 400px 
-    height 400px
-    left 60%
-    top 100px
-    line-height 400px
-    text-align center
-    .wrapper
-      font-size 120px
-      line-height 64px
-      text-align center
-      b 
-        font-size 64px
-        line-height 64px
-    &:after
-      transform rotate(110deg)
-      transform-origin 10px -198px
+// article.screen.screen--builder
+//   background #fff url('../images/themebuilder.png') 50% 50% no-repeat
+//   background-size contain
 
-.illustration.illustration--ok.cloud
-  background-image url('../images/ok.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 300px 
-    height 300px
-    left 10px
-    right 0
-    bottom 140px
-    line-height 300px
-    text-align center
-    .wrapper
-      font-size 46px
-      line-height 48px
-      text-align center
-      b 
-        display block
-        font-size 48px
-        line-height 56px
-    &:after
-      transform rotate(195deg)
-      transform-origin 10px -140px
+// article.screen.screen--conf
+//   background #fff url('../images/babel_conf.png') 50% 50% no-repeat
+//   background-size contain
 
-.illustration.illustration--speed.cloud
-  background-image url('../images/speed.png')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 400px 
-    height 400px
-    right 30%
-    top 220px
-    line-height 400px
-    text-align center
-    .wrapper
-      font-size 64px
-      line-height 80px
-      text-align center
-    &:after
-      transform rotate(-150deg)
-      transform-origin 10px -195px
+// article.screen.screen--preset
+//   background #fff url('../images/babel_plugins.png') 50% 50% no-repeat
+//   background-size contain
 
-.cloud.illustration.illustration--canwe
-  background-image url('../images/can.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 300px 
-    height 300px
-    right 0
-    top 0
-    bottom 0
-    left 0
-    line-height 300px
-    text-align center
-    .wrapper
-      font-size 56px
-      line-height 64px
-      text-align center
-    &:after
-      transform rotate(65deg)
-      transform-origin 10px -145px
 
-.cloud.illustration.illustration--wecan
-  background-image url('../images/can.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 300px 
-    height 300px
-    right 0
-    top 0
-    bottom 0
-    left 0
-    line-height 300px
-    text-align center
-    .wrapper
-      font-size 56px
-      line-height 64px
-      text-align center
-    &:after
-      transform rotate(-65deg)
-      transform-origin 10px -145px
+// article.screen.screen--stage-0
+//   background #fff url('../images/stage_0.png') 50% 100% no-repeat
+//   background-size contain
 
-.qrcode.compare
-  .wrapper .half h2
-    font-size 64px
-    line-height 80px
-  p 
-    font-size 42px
+// article.screen.screen--stage-i
+//   background #fff url('../images/stage_i.png') 50% 100% no-repeat
+//   background-size contain
 
-article.center.comparer
-  background green
-  box-shadow inset -600px 0 0 0 red
-  &.chrome .wrapper 
-    .half:first-child:before
-      background-image url(../images/crome.png)
-  &.firefox .wrapper 
-    .half:first-child:before
-      background-image url(../images/firefox.png)
-  &.safari .wrapper 
-    .half:first-child:before
-      background-image url(../images/safari.png)
-  .wrapper
-    width 100%
-    .half
-      text-align center
-      &:last-child:before
-        background-image url(../images/jQurery.gif)
-      &:before
-        content: ""
-        display block
-        width 200px
-        height 200px
-        margin 0 auto 20px
-        background-size auto 200px
-      h2
-        color #fff
-        font-size 72px
-        text-transform none
+// article.screen.screen--stage-3
+//   background #fff url('../images/stage_3.png') 50% 100% no-repeat
+//   background-size contain
 
-.cloud.illustration.illustration--tools
-  background-image url('../images/tools.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 400px 
-    height 400px
-    right 0
-    left 0
-    top 0
-    bottom 0
-    line-height 400px
-    text-align center
-    .wrapper
-      font-size 108px
-      line-height 108px
-      text-align center
-      b
-        display block
-        font-size 43px
-        line-height 48px
-    &:after
-      display none
+// article.screen.screen--stage-4
+//   background #fff url('../images/stage_4.png') 50% 100% no-repeat
+//   background-size contain
 
-.cloud.illustration.illustration--support
-  background-image url('../images/support.jpg')
-  background-position 50% 50% 
-  background-size cover
-  h1
-    width 400px 
-    height 400px
-    right 40px
-    top 40px
-    line-height 400px
-    text-align center
-    .wrapper
-      font-size 140px
-      line-height 120px
-      text-align center
-      b
-        display block
-        font-size 32px
-        line-height 40px
-    &:after
-      display none
+// article.screen.screen--support-es6
+//   background #fff url('../images/essupport.png') 50% 100% no-repeat
+//   background-size contain
 
-.cloud.illustration.illustration--transpiler
-  background-color #000
-  background-image url('../images/transpiler.jpg')
-  background-position 50% 50% 
-  background-size 80% auto
-  h1
-    width 300px 
-    height 300px
-    right 0
-    top 0
-    bottom 0
-    left 0
-    line-height 300px
-    text-align center
-    .wrapper
-      font-size 32px
-      line-height 40px
-      text-align center
-    &:after
-      display none
+// article.screen.screen--support-es7
+//   background #fff url('../images/support_es7.png') 50% 100% no-repeat
+//   background-size contain
 
-.center.qrcode.transpiler
-  .wrapper
-    .half
-      h2 
-        display block
-        font-size 100px
-        text-align center
-    p 
-      font-size 56px
+// article.screen.screen--support-esnext
+//   background #fff url('../images/support_esnext.png') 50% 100% no-repeat
+//   background-size contain
 
-.center.qrcode.config
-  .wrapper
-    .half
-      h2 
-        display block
-        font-size 64px
+// article.screen.screen--admin-theme
+//   background #fff url('../images/admin_theme.png') 50% 100% no-repeat
+//   background-size contain
 
-.cloud.illustration.illustration--babel
-  background-color #000
-  background-image url('../images/babel.jpg')
-  background-position 50% 50% 
-  h1
-    width 300px 
-    height 300px
-    right 0
-    top 0
-    bottom 0
-    left 0
-    line-height 300px
-    text-align center
-    .wrapper
-      font-size 48px
-      line-height 64px
-      text-align center
-    &:after
-      display none
+// article.screen.screen--admin-config
+//   background #fff url('../images/admin_config.png') 50% 100% no-repeat
+//   background-size contain
+
+// article.screen.screen--sandbox
+//   background #fff url('../images/sandbox.png') 50% 100% no-repeat
+//   background-size contain
+
+// .illustration.illustration--grunt
+//   background-image url('../images/grunt.png')
+//   background-position 50% 50% 
+//   background-size auto
+
+// .illustration.illustration--gulp
+//   background-image url('../images/gulp.png')
+//   background-position 50% 50% 
+//   background-size auto
+
+// .illustration.illustration--doit
+//   background-image url('../images/doit.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+
+// .illustration.illustration--m
+//   background-image url('../images/magento.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+
+// .illustration.illustration--m1
+//   background-image url('../images/m1.png')
+//   background-position 50% 50% 
+//   background-size cover
+
+// .illustration.illustration--m2
+//   background-image url('../images/m2.png')
+//   background-position 50% 50% 
+//   background-size cover
+
+// .illustration.illustration--vaimo
+//   background-image url('../images/logo.png')
+//   background-position 50% 50% 
+//   background-size auto
+//   background-color #fff
+
+// .illustration.illustration--tc.cloud
+//   background-image url('../images/tc.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 400px 
+//     height 400px
+//     left 0
+//     right 0
+//     top 0
+//     bottom 0
+//     line-height 400px
+//     text-align center
+//     .wrapper
+//       font-size 140px
+//       line-height 140px
+//       text-align center
+//       text-transform none
+//     b
+//       display block
+//       font-size 160px
+//       line-height 120px
+//     &:after
+//       display none
+
+// .illustration.illustration--why.cloud
+//   background-image url('../images/why.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 400px 
+//     height 400px
+//     left 60%
+//     top 100px
+//     line-height 400px
+//     text-align center
+//     .wrapper
+//       font-size 120px
+//       line-height 64px
+//       text-align center
+//       b 
+//         font-size 64px
+//         line-height 64px
+//     &:after
+//       transform rotate(110deg)
+//       transform-origin 10px -198px
+
+// .illustration.illustration--ok.cloud
+//   background-image url('../images/ok.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 300px 
+//     height 300px
+//     left 10px
+//     right 0
+//     bottom 140px
+//     line-height 300px
+//     text-align center
+//     .wrapper
+//       font-size 46px
+//       line-height 48px
+//       text-align center
+//       b 
+//         display block
+//         font-size 48px
+//         line-height 56px
+//     &:after
+//       transform rotate(195deg)
+//       transform-origin 10px -140px
+
+// .illustration.illustration--speed.cloud
+//   background-image url('../images/speed.png')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 400px 
+//     height 400px
+//     right 30%
+//     top 220px
+//     line-height 400px
+//     text-align center
+//     .wrapper
+//       font-size 64px
+//       line-height 80px
+//       text-align center
+//     &:after
+//       transform rotate(-150deg)
+//       transform-origin 10px -195px
+
+// .cloud.illustration.illustration--canwe
+//   background-image url('../images/can.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 300px 
+//     height 300px
+//     right 0
+//     top 0
+//     bottom 0
+//     left 0
+//     line-height 300px
+//     text-align center
+//     .wrapper
+//       font-size 56px
+//       line-height 64px
+//       text-align center
+//     &:after
+//       transform rotate(65deg)
+//       transform-origin 10px -145px
+
+// .cloud.illustration.illustration--wecan
+//   background-image url('../images/can.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 300px 
+//     height 300px
+//     right 0
+//     top 0
+//     bottom 0
+//     left 0
+//     line-height 300px
+//     text-align center
+//     .wrapper
+//       font-size 56px
+//       line-height 64px
+//       text-align center
+//     &:after
+//       transform rotate(-65deg)
+//       transform-origin 10px -145px
+
+// .qrcode.compare
+//   .wrapper .half h2
+//     font-size 64px
+//     line-height 80px
+//   p 
+//     font-size 42px
+
+// article.center.comparer
+//   background green
+//   box-shadow inset -600px 0 0 0 red
+//   &.chrome .wrapper 
+//     .half:first-child:before
+//       background-image url(../images/crome.png)
+//   &.firefox .wrapper 
+//     .half:first-child:before
+//       background-image url(../images/firefox.png)
+//   &.safari .wrapper 
+//     .half:first-child:before
+//       background-image url(../images/safari.png)
+//   .wrapper
+//     width 100%
+//     .half
+//       text-align center
+//       &:last-child:before
+//         background-image url(../images/jQurery.gif)
+//       &:before
+//         content: ""
+//         display block
+//         width 200px
+//         height 200px
+//         margin 0 auto 20px
+//         background-size auto 200px
+//       h2
+//         color #fff
+//         font-size 72px
+//         text-transform none
+
+// .cloud.illustration.illustration--tools
+//   background-image url('../images/tools.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 400px 
+//     height 400px
+//     right 0
+//     left 0
+//     top 0
+//     bottom 0
+//     line-height 400px
+//     text-align center
+//     .wrapper
+//       font-size 108px
+//       line-height 108px
+//       text-align center
+//       b
+//         display block
+//         font-size 43px
+//         line-height 48px
+//     &:after
+//       display none
+
+// .cloud.illustration.illustration--support
+//   background-image url('../images/support.jpg')
+//   background-position 50% 50% 
+//   background-size cover
+//   h1
+//     width 400px 
+//     height 400px
+//     right 40px
+//     top 40px
+//     line-height 400px
+//     text-align center
+//     .wrapper
+//       font-size 140px
+//       line-height 120px
+//       text-align center
+//       b
+//         display block
+//         font-size 32px
+//         line-height 40px
+//     &:after
+//       display none
+
+// .cloud.illustration.illustration--transpiler
+//   background-color #000
+//   background-image url('../images/transpiler.jpg')
+//   background-position 50% 50% 
+//   background-size 80% auto
+//   h1
+//     width 300px 
+//     height 300px
+//     right 0
+//     top 0
+//     bottom 0
+//     left 0
+//     line-height 300px
+//     text-align center
+//     .wrapper
+//       font-size 32px
+//       line-height 40px
+//       text-align center
+//     &:after
+//       display none
+
+// .center.qrcode.transpiler
+//   .wrapper
+//     .half
+//       h2 
+//         display block
+//         font-size 100px
+//         text-align center
+//     p 
+//       font-size 56px
+
+// .center.qrcode.config
+//   .wrapper
+//     .half
+//       h2 
+//         display block
+//         font-size 64px
+
+// .cloud.illustration.illustration--babel
+//   background-color #000
+//   background-image url('../images/babel.jpg')
+//   background-position 50% 50% 
+//   h1
+//     width 300px 
+//     height 300px
+//     right 0
+//     top 0
+//     bottom 0
+//     left 0
+//     line-height 300px
+//     text-align center
+//     .wrapper
+//       font-size 48px
+//       line-height 64px
+//       text-align center
+//     &:after
+//       display none
